@@ -1,0 +1,18 @@
+La diferencia entre el modelo anemico y el modelo no anemico se puede ver cuando
+una clase deja de tener comportamiento propio y solo almacena datos.En el modelo
+anemico una parte de su logica esta por fuera de la clase como se puede ver en la
+clase main, donde se hace el formateo de la fecha. Mientras que el modelo no anemico,
+la clase maneja su propio comportamiento, es decir que el formateo lo hace desde
+dentro de la clase y el main solo utiliza los metodos sin realizar el formateo.
+
+-En el modelo anemico la clase deja de tener comportamiento propio y solo almacena datos, el comportamiento o la logica
+se maneja desde fuera de la clase, por ejemplo en el caso del formateo de la fecha, la clase solo guarda la fecha con un
+LocalDateTiempo pero el formateo se realiza desde el main:
+    "System.out.println(tiempoAnemico.getTiempo().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));"
+es decir que la clase TiempoAnemico no tiene el control de como mostrar la fecha y solo guarda un dato.
+
+-En el modelo no anemico la clase tiene comportamiento propio y tambien almacena datos, esto lo hace responsable de las
+operaciones que haga, es decir que la logica esta encapsulada por dentro de la clase, esto nos permite que a la hora de
+modificar algo se haga dentro de la misma clase, por ejemplo la clase main solo utiliza el comportamiento de la clase
+Tiempo:
+    "System.out.println(tiempo.formatoCorto());"
